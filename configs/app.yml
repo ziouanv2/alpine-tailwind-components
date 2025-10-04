@@ -1,0 +1,23 @@
+api:
+  provider: google
+search:
+  input_file: keywords.txt
+  allowed_domains: []
+  blocked_domains: []
+  max_results_per_keyword: 5
+  per_site_delay: 5
+  global_rate_limit_qps: 1
+  jitter_seconds: 0.5
+  user_agent: ResearchCollector/1.0 (+https://example.com/contact)
+browser:
+  headless: true
+  wait_until: networkidle
+  timeout_ms: 45000
+  scroll_step: 400
+  max_scroll_steps: 60
+output:
+  output_format: jsonl
+  output_path: outputs
+  create_timestamp_directory: true
+logging:
+  level: INFO
